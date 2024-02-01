@@ -1,0 +1,19 @@
+<h1>Todo App!</h1>
+
+{% for todo in todos %}
+
+<div>
+	<small>{{ todo.uuid }} &mdash; {{ todo.created }}</small>
+	<p>{{ todo.body }}</p>
+</div>
+<hr />
+
+
+{% endfor %}
+
+<h2>Add Todo</h2>
+
+<form action="/todo" method="post">
+	<input type="text" name="body" />
+	<input type="submit" value="Add Todo!" />
+</form>

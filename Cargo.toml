@@ -1,0 +1,17 @@
+[package]
+name = "nix-demo-project"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+askama = { version = "0.12.1", features = ["with-axum"] }
+askama_axum = "0.4.0"
+axum = { version = "0.7.4", features = ["form"] }
+axum-macros = "0.4.1"
+serde = { version = "1.0.196", features = ["derive"] }
+sqlx = { version = "0.7.3", features = ["uuid", "time", "runtime-tokio-rustls", "tls-rustls", "mysql", "macros"] }
+time = "0.3.32"
+tokio = { version = "1.35.1", features = ["full"] }
+uuid = { version = "1.7.0", features = ["v4"] }
